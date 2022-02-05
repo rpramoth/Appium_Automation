@@ -6,13 +6,13 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 
 import io.appium.java_client.TouchAction;
-import static io.appium.java_client.touch.TapOptions.tapOptions;
-import static io.appium.java_client.touch.LongPressOptions.longPressOptions;
+
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.touch.LongPressOptions;
 import static java.time.Duration.ofSeconds;
-
+import static io.appium.java_client.touch.TapOptions.tapOptions;
+import static io.appium.java_client.touch.LongPressOptions.longPressOptions;
 import static io.appium.java_client.touch.offset.ElementOption.element;
 
 

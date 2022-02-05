@@ -13,6 +13,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
+import pageObjects.HomePage;
 
 public class Base extends ReusableMethods{
 
@@ -22,8 +23,10 @@ public class Base extends ReusableMethods{
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		// In Appium, class will serve as tag name
 		//class= android.widget.TextView
+		HomePage hp = new HomePage(driver);
+		hp.preferenceLink.click();
 		
-		driver.findElement(By.xpath("//android.widget.TextView[@text='Preference']")).click();
+	//	driver.findElement(By.xpath("//android.widget.TextView[@text='Preference']")).click();
 		driver.findElement(By.xpath("//android.widget.TextView[@text='3. Preference dependencies']")).click();
 		driver.findElement(By.id("android:id/checkbox")).click();
 		driver.findElement(By.xpath("(//android.widget.RelativeLayout)[2]")).click();
